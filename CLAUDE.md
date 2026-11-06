@@ -46,7 +46,8 @@ employee_app/
 │       ├── phase-coder.md      # Implements one PLAN.md phase + tests + docs, reports files changed
 │       ├── quality-verifier.md # Read-only review, writes reviews/phase-<n>-review.md (ID, severity, status)
 │       ├── bug-fixer.md        # Fixes report issues one by one, runs pytest after each, updates Status
-│       └── pr-reviewer.md      # Reviews a GitHub PR / GitLab MR via MCP, writes reviews/pr-<n>-review.md
+│       ├── pr-reviewer.md      # Reviews a GitHub PR / GitLab MR via MCP, writes reviews/pr-<n>-review.md
+│       └── github-reviewer.md  # Reviews a GitHub PR, commit, compare or whole repo via the github MCP server
 └── docs/
     ├── PLAN.md                 # Roadmap (Phases 1-3)
     ├── coding-conventions.md   # Backend and template rules (imported below)
