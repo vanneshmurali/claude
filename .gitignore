@@ -1,0 +1,13 @@
+# Local data - never commit employee records
+employees.db
+*.db
+
+# Python / pytest
+__pycache__/
+.pytest_cache/
+
+# Generated review reports
+reviews/
+
+# Personal Claude Code settings
+.claude/settings.local.json

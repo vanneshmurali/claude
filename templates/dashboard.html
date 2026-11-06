@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Total employees: <b>{{ total }}</b></p>
+<p>Average salary: <b>{{ "%.2f" % avg }}</b></p>
+<h3>Employees by department</h3>
+<ul>{% for d, n in by_dept %}<li>{{ d }}: {{ n }}</li>{% endfor %}</ul>
+{% endblock %}

@@ -1,0 +1,15 @@
+# DBHub MCP server config (used by .mcp.json). Read-only: no writes to employees.db.
+[[sources]]
+id = "employees"
+dsn = "sqlite:///C:/Users/vannesh.murali/employee_app/employees.db"
+
+[[tools]]
+name = "execute_sql"
+source = "employees"
+readonly = true
+max_rows = 100
+
+# Schema browsing (always read-only)
+[[tools]]
+name = "search_objects"
+source = "employees"

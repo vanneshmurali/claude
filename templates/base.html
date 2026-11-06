@@ -1,0 +1,13 @@
+<!doctype html>
+<title>{{ title }}</title>
+<h2>{{ title }}</h2>
+{% if session.user %}
+  <p>Logged in as {{ session.user }} ({{ session.role }}) |
+  <a href="/">Employees</a>
+  {# UX only: /dashboard enforces the admin role itself #}
+  {% if session.role == 'admin' %} | <a href="/dashboard">Dashboard</a>{% endif %}
+  | <form method="post" action="/logout" style="display:inline">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <button>Logout</button></form></p>
+{% endif %}
+{% block content %}{% endblock %}

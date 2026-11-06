@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% if error %}<p style="color:red">{{ error }}</p>{% endif %}
+<form method="post">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+  <input name="username" placeholder="Username">
+  <input name="password" type="password" placeholder="Password">
+  <button>Login</button>
+</form>
+{% endblock %}

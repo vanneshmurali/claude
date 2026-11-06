@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "db-hub": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@bytebase/dbhub@1.5.0", "--transport", "stdio", "--config", "dbhub.toml"]
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_PAT}"
+      }
+    },
+    "gitlab": {
+      "type": "http",
+      "url": "https://gitlab.com/api/v4/mcp"
+    }
+  }
+}
