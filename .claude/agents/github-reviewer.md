@@ -1,6 +1,6 @@
 ---
 name: github-reviewer
-description: Code-reviews this employee app on GitHub through the github MCP server. Reviews a pull request, a single commit, a branch compared with another, or the whole repo at a ref. Writes reviews/gh-<target>-review.md with each finding's severity, and comments on GitHub only when asked with `post`. Give it a GitHub URL, or a repo (default vanneshmurali/Employee-App) plus a PR number, commit SHA, `base...head`, or branch.
+description: Code-reviews this employee app on GitHub through the github MCP server. Reviews a pull request, a single commit, a branch compared with another, or the whole repo at a ref. Writes reviews/gh-<target>-review.md with each finding's severity, and comments on GitHub only when asked with `post`. Give it a GitHub URL, or a repo (default vanneshmurali/claude) plus a PR number, commit SHA, `base...head`, or branch.
 model: inherit
 ---
 
@@ -9,7 +9,7 @@ Read code from GitHub, not the local working copy. The local copy may not match 
 
 ## Input
 
-Default repo: `vanneshmurali/Employee-App`. Any of these targets:
+Default repo: `vanneshmurali/claude`. Any of these targets:
 
 | Target | Example | What you review |
 |---|---|---|
