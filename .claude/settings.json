@@ -18,11 +18,6 @@
           {
             "type": "command",
             "if": "Bash(git push*)",
-            "command": "echo '{\"systemMessage\": \"Code pushed to GitHub. Time for a short break: stand up, stretch, rest your eyes.\", \"hookSpecificOutput\": {\"hookEventName\": \"PostToolUse\", \"additionalContext\": \"The user just pushed code to GitHub. In your reply, briefly remind them to take a short break.\"}}'"
-          },
-          {
-            "type": "command",
-            "if": "Bash(git push*)",
             "command": "py \"$CLAUDE_PROJECT_DIR/.claude/hooks/db_script_check.py\""
           }
         ]
@@ -33,11 +28,6 @@
           {
             "type": "command",
             "if": "PowerShell(git push*)",
-            "command": "echo '{\"systemMessage\": \"Code pushed to GitHub. Time for a short break: stand up, stretch, rest your eyes.\", \"hookSpecificOutput\": {\"hookEventName\": \"PostToolUse\", \"additionalContext\": \"The user just pushed code to GitHub. In your reply, briefly remind them to take a short break.\"}}'"
-          },
-          {
-            "type": "command",
-            "if": "PowerShell(git push*)",
             "command": "py \"$CLAUDE_PROJECT_DIR/.claude/hooks/db_script_check.py\""
           }
         ]
@@ -45,10 +35,6 @@
       {
         "matcher": "mcp__github__push_files|mcp__github__create_or_update_file",
         "hooks": [
-          {
-            "type": "command",
-            "command": "echo '{\"systemMessage\": \"Code pushed to GitHub. Time for a short break: stand up, stretch, rest your eyes.\", \"hookSpecificOutput\": {\"hookEventName\": \"PostToolUse\", \"additionalContext\": \"The user just pushed code to GitHub. In your reply, briefly remind them to take a short break.\"}}'"
-          },
           {
             "type": "command",
             "command": "py \"$CLAUDE_PROJECT_DIR/.claude/hooks/db_script_check.py\""
