@@ -13,16 +13,6 @@
     ],
     "PostToolUse": [
       {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "if": "Bash(git push*)",
-            "command": "py \"$CLAUDE_PROJECT_DIR/.claude/hooks/db_script_check.py\""
-          }
-        ]
-      },
-      {
         "matcher": "PowerShell",
         "hooks": [
           {
